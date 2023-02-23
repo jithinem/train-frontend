@@ -1,0 +1,23 @@
+table{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+table,th,tr,td{
+    border: 2px black solid;
+}
+table button{
+    border: none;
+    background-color: bisque;
+}
+.back{
+	top: 95%;
+	left: 70%;
+	transform: translate(-70%,-95%);
+	position: absolute;
+}
+.back a{
+	text-decoration: none;
+}
+

@@ -1,0 +1,39 @@
+.box{
+    background-color: antiquewhite;
+    width: 500px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+}
+.boxhead{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+}
+.f{
+    margin-top: 40px;
+    margin-left: 100px;
+}
+input{
+    margin-bottom: 30px;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+}
+.loginbt{
+    width: 200px;
+    height: 30px;
+    margin-left: 50px;
+    border-radius: 10px;
+}
+.boxbottom{
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+

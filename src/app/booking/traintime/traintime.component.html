@@ -1,0 +1,32 @@
+    <!--Table-->
+    <table class="table  w-auto">
+      <!--Table head-->
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Train Number</th>
+          <th>Departure</th>
+          <th>Departure Time</th>
+          <th>Destination</th>
+          <th>Destination Time</th>
+        </tr>
+      </thead>
+      <!--Table head-->
+    
+      <!--Table body-->
+      <tbody>
+        <tr class="table-info" *ngFor="let time of times let i=index">
+          <th scope="row">{{i+1}}</th>
+          <td>{{time.TNO}}</td>
+          <td>{{from}}</td>
+          <td>{{time.S}}</td>
+          <td>{{to}}</td>
+          <td>{{time.E}}</td>
+          <button (click)="booknow(times,i)">Book Now</button>
+        </tr>
+      </tbody>
+      <!--Table body-->
+    </table>
+    <!--Table-->
+    <div class="back"><a routerLink="/home">Back to Home</a></div>
+  

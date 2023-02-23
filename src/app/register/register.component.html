@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="box">
+        <form [formGroup]="registerForm">
+            <div class="boxhead">Register</div>
+            <div class="f">
+                <div style="color: red;" *ngIf="this.registerForm.get('username')?.errors && this.registerForm.get('username')?.touched">Invalid username</div>
+                <div><input formControlName="username" type="text" placeholder="User name"></div>
+
+                <div style="color: red;" *ngIf="this.registerForm.get('password')?.errors && this.registerForm.get('password')?.touched">Invalid password</div>
+                <div><input formControlName="password" type="password" placeholder="Password"></div>
+
+                <div style="color: red;" *ngIf="this.registerForm.get('confirmpassword')?.errors && this.registerForm.get('confirmpassword')?.touched">Invalid password</div>
+                <div><input formControlName="confirmpassword" type="password" placeholder="Confirm password"></div>
+
+                <div style="color: red;" *ngIf="this.registerForm.get('email')?.errors && this.registerForm.get('email')?.touched">Invalid email id</div>
+                <div><input formControlName="email" type="email" placeholder="Email id"></div>
+
+                <div style="color: red;" *ngIf="this.registerForm.get('phone')?.errors && this.registerForm.get('phone')?.touched">Invalid phone number</div>
+                <div><input formControlName="phone" type="number" placeholder="Phone number"></div>
+
+                <div><button (click)="register()" class="loginbt">Register</button></div>
+            </div>
+            <div class="boxbottom">
+                <div>Already registered?<a routerLink="">Login here</a></div>
+            </div>
+
+        </form>
+    
+    </div>
+</div>

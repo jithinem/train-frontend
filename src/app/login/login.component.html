@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="box">
+        <form [formGroup]="loginForm">
+            <div class="boxhead">Login</div>
+            <div class="f">
+
+                <div style="color: red;" *ngIf="this.loginForm.get('email')?.errors && this.loginForm.get('email')?.touched">Invalid email id</div>
+                <div><input formControlName="email" type="email" placeholder="email id"></div>
+
+                <div style="color: red;" *ngIf="this.loginForm.get('password')?.errors && this.loginForm.get('password')?.touched">Invalid password</div>
+                <div><input formControlName="password" type="password" placeholder="Password"></div>
+                <div><button class="loginbt" (click)="login()">Login</button></div>
+            </div>
+            <div class="boxbottom">
+                <div>Not registered?<a routerLink="register">Sign Up here</a></div>
+                <div><a routerLink="admin">Admin Login</a></div>
+            </div>
+
+        </form>
+    
+    </div>
+</div>

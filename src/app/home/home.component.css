@@ -1,0 +1,62 @@
+.box{
+    background-color: rgb(202, 157, 99);
+    width: 500px;
+    height: 350px;
+    top: 10%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-10%);
+    border-radius: 10px;
+}
+.boxhead{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+}
+.f{
+    margin-top: 40px;
+    margin-left: 100px;
+}
+.from{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+.to{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 5px; 
+}
+.sec{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+.class{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+.date{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+.time{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+.loginbt{
+    width: 200px;
+    height: 30px;
+    margin-left: 20%;
+    border-radius: 10px;
+}
+.boxbottom{
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 10px;
+}

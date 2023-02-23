@@ -1,0 +1,27 @@
+.card{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: yellow;
+}
+li{
+	border: none;
+	background-color: rgb(189, 223, 101);
+
+}
+ul{
+	background-color: rgb(189, 223, 101);
+}
+.ttr{
+	background-color: rgb(225, 199, 166);
+}
+.back{
+	top: 95%;
+	left: 70%;
+	transform: translate(-70%,-95%);
+	position: absolute;
+}
+.back a{
+	text-decoration: none;
+}

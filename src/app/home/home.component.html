@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="box">
+        <form >
+            <div class="boxhead">Home</div>
+            <div class="f">
+                from
+                <select [(ngModel)]="from"  class="from " name="from" id="">
+                    <option value="SELECT" class="dist">SELECT</option>
+                    <option value="KASARGOD" class="dist">KASARGOD</option>
+                    <option value="KANNUR" class="dist">KANNUR</option>
+                    <option value="KOZHIKODE" class="dist">KOZHIKODE</option>
+                    <option value="MALAPPURAM" class="dist">MALAPPURAM</option>
+                    <option value="THRISSUR" class="dist">THRISSUR</option>
+                    <option value="ERNAKULAM" class="dist">ERNAKULAM</option>
+                    <option value="KOTTAYAM" class="dist">KOTTAYAM</option>
+                    <option value="PATHANAMTHITTA" class="dist">PATHANAMTHITTA</option>
+                    <option value="KOLLAM" class="dist">KOLLAM</option>
+                    <option value="THIRUVANANTHAPURAM" class="dist">THIRUVANANTHAPURAM</option>
+                </select><br>
+                to&nbsp;&nbsp;&nbsp;&nbsp;
+                <select [(ngModel)]="to" class="to" name="to" id="">
+                    <option value="SELECT" class="dist">SELECT</option>
+                    <option value="KASARGOD" class="dist">KASARGOD</option>
+                    <option value="KANNUR" class="dist">KANNUR</option>
+                    <option value="KOZHIKODE" class="dist">KOZHIKODE</option>
+                    <option value="MALAPPURAM" class="dist">MALAPPURAM</option>
+                    <option value="THRISSUR" class="dist">THRISSUR</option>
+                    <option value="ERNAKULAM" class="dist">ERNAKULAM</option>
+                    <option value="KOTTAYAM" class="dist">KOTTAYAM</option>
+                    <option value="PATHANAMTHITTA" class="dist">PATHANAMTHITTA</option>
+                    <option value="KOLLAM" class="dist">KOLLAM</option>
+                    <option value="THIRUVANANTHAPURAM" class="dist">THIRUVANANTHAPURAM</option>
+                </select>
+                <!-- <div >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select class="sec" name="" id="">
+                        <option value="">GENERAL</option>
+                    </select>
+                </div> -->
+                <!-- <div >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select class="class" name="" id="">
+                        <option value="">ALL CLASSES</option>
+                    </select>
+                </div> -->
+                <div >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" [(ngModel)]="pass"  class="class" name="pass" id="" placeholder="Enter no. of passengers">
+                </div>
+                <div >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input class="date" type="date" [(ngModel)]="date" name="date">
+                </div>
+                <!-- <div >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select class="time" name="" id="">
+                        <option value="">SELECT DEPARTURE TIME</option>
+                    </select>
+                </div> -->
+
+                <!-- <div><input formControlName="email" type="email" placeholder="email id"></div>
+                <div><input formControlName="password" type="password" placeholder="Password"></div> -->
+                <div><button class="loginbt" (click)="checkTrain()">Check Train</button></div>
+            </div>
+            <div class="boxbottom">
+                <div><button class="cancel">Cancel Ticket</button></div>
+            </div>
+
+
+        </form>
+    
+    </div>
+        
+</div>
