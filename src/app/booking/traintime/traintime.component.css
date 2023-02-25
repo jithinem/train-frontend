@@ -20,4 +20,24 @@ table button{
 .back a{
 	text-decoration: none;
 }
+.myaccount{
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+nav{
+    height: 140px;
+}
+nav h1{
+    margin-left: 10px;
+    color: gold;
+}
+nav img{
+    border-radius: 10px;
+}
+footer{
+    margin-top: 32%;
+}
+
 

@@ -19,10 +19,16 @@ export class TraintimeComponent {
   booknow(times:any,i:any){
     localStorage.setItem('start',times[i].S);
     localStorage.setItem('end',times[i].E)
+    localStorage.setItem('rs',times[i].rs)
     localStorage.setItem('trainNumber',times[i].TNO)
     // localStorage.setItem('add',JSON.stringify(times[i]))
     this.router.navigateByUrl('booking/confirmation')
 
   }
+  logout(){
+    alert('logout successful');
+    this.router.navigateByUrl('')
+  }
+
 
 }

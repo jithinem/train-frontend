@@ -2,10 +2,10 @@
     background-color: rgb(202, 157, 99);
     width: 500px;
     height: 350px;
-    top: 10%;
+    top: 32%;
     left: 50%;
     position: absolute;
-    transform: translate(-50%,-10%);
+    transform: translate(-50%,-32%);
     border-radius: 10px;
 }
 .boxhead{
@@ -59,4 +59,27 @@
     align-items: center;
     justify-content: right;
     padding: 10px;
+}
+.myaccount{
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+}
+/* nav{
+    height: 150px;
+} */
+nav h1{
+    margin-left: 10px;
+    color: gold;
+}
+nav img{
+    border-radius: 10px;
+}
+footer{
+    margin-top: 26%;
+}
+.modal-body input{
+    margin-bottom: 10px;
+    width: 400px;
+    border-radius: 5px;
 }

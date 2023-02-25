@@ -15,6 +15,7 @@ export class HomeComponent {
   to:any;
   date:any;
   times:any;
+  email:any;
   // homeForm=this.fb.group({})
   checkTrain(){
     // console.log(this.pass);
@@ -42,9 +43,25 @@ export class HomeComponent {
       
     )
 
-
-    
-
+  }
+  myaccount(){
+    this.email=JSON.parse(localStorage.getItem('email')||'') 
+  }
+  logout(){
+    alert('logout successful');
+    localStorage.removeItem('date');
+    localStorage.removeItem('to');
+    localStorage.removeItem('start');
+    localStorage.removeItem('trainNumber');
+    localStorage.removeItem('email');
+    localStorage.removeItem('add');
+    localStorage.removeItem('pass');
+    localStorage.removeItem('rs');
+    localStorage.removeItem('end');
+    localStorage.removeItem('from');
+    localStorage.removeItem('times');
+    localStorage.removeItem('totalRs');
+    this.router.navigateByUrl('')
   }
 
 

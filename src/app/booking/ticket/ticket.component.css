@@ -1,13 +1,17 @@
 .card{
 	position: absolute;
-	top: 50%;
+	top: 40%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%,-40%);
 	background-color: yellow;
+	border: 2px black solid;
+	/* height: 600px;
+	width: 600px; */
 }
 li{
 	border: none;
 	background-color: rgb(189, 223, 101);
+	display: flex;
 
 }
 ul{
@@ -18,10 +22,18 @@ ul{
 }
 .back{
 	top: 95%;
-	left: 70%;
-	transform: translate(-70%,-95%);
+	left: 50%;
+	transform: translate(-50%,-95%);
 	position: absolute;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	/* background-color: blueviolet; */
 }
 .back a{
 	text-decoration: none;
+	margin-right: 150PX;
+}
+h4{
+	font-weight: bolder;
 }

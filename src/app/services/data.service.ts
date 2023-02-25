@@ -33,7 +33,7 @@ export class DataService {
       email,
       add
     }
-    return this.http.post('http://localhost:3000/booking',body)
+    return this.http.put('http://localhost:3000/booking',body)
   }
 
   getTrain(from:any,to:any){

@@ -1,5 +1,5 @@
-<div class="card" style="width: 28rem;">
-  <img class="card-img-top" style="width: 150px; margin-left: 30%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="Card image cap">
+<div #pdfTable="" id="htmlData" class="card content " style="width: 28rem;">
+  <img class="card-img-top" style="width: 150px; margin-left: 30%;" src="../assets/qr code.png" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title text-center">GOLDEN LINE KERALA RAIL LIMITED</h5>
     <p class="text-center">GT45ww23fgrtu4</p>
@@ -7,20 +7,20 @@
   </div>
   <ul class="list-group list-group-flush">
     <div style="display: flex; justify-content: space-between;">
-      <li class="list-group-item">TRAIN NO:{{trainNumber}}</li>
-      <li class="list-group-item">DATE:{{date}}</li>  
+      <li class="list-group-item" >TRAIN NO:<h5>{{trainNumber}}</h5></li>
+      <li class="list-group-item">DATE:<h5>{{date}}</h5> </li>  
     </div>
     <div style="display: flex; justify-content: space-between;">
-      <li class="list-group-item">DEPARTURE:{{start}}</li>
-      <li class="list-group-item">ARRIVAL:{{end}}</li>  
+      <li class="list-group-item">DEPARTURE:<h5>{{start}}</h5> </li>
+      <li class="list-group-item">ARRIVAL:<h5>{{end}}</h5> </li>  
     </div>
     <div style="display: flex; justify-content: space-between;">
-      <li class="list-group-item">FROM:{{from}}</li>
-      <li class="list-group-item">TO:{{to}}</li>  
+      <li class="list-group-item">FROM:<h5>{{from}}</h5> </li>
+      <li class="list-group-item">TO:<h5>{{to}}</h5> </li>  
     </div>
     <div style="display: flex; justify-content: space-between;">
-      <li class="list-group-item">NO. OF PASSENGERS:{{pass}}</li>
-      <li class="list-group-item">PRICE:{{price}}</li>  
+      <li class="list-group-item">NO. OF PASSENGERS:<h5>{{pass}}</h5> </li>
+      <li class="list-group-item">PRICE:<h5>Rs.{{totalRs}}</h5> </li>  
     </div>
 
   </ul>
@@ -28,4 +28,7 @@
     <p>TTR Check <i class="fa-light fa-square fa-2x"></i></p>
   </div>
 </div>
-<div class="back"><a routerLink="/home">Back to Home</a></div>
+<div class="back">
+  <div><a routerLink="/home">Back to Home</a></div>
+  <div><button (click)="downloadPdf()">Download ticket</button></div>
+</div>
