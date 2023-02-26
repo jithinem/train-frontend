@@ -24,7 +24,9 @@ export class LoginComponent {
       this.ds.login(email,password).subscribe(
         (result:any)=>{
           localStorage.setItem('email',JSON.stringify(result.email) );
-
+          localStorage.setItem('username',JSON.stringify(result.username) );
+          localStorage.setItem('phone',JSON.stringify(result.phone) );
+          localStorage.setItem('id',JSON.stringify(result.id) );
           alert(result.message)
           this.router.navigateByUrl('home')
         },

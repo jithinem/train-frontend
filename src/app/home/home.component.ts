@@ -16,6 +16,10 @@ export class HomeComponent {
   date:any;
   times:any;
   email:any;
+  username:any;
+  phone:any;
+  ID:any;
+  id:any;
   // homeForm=this.fb.group({})
   checkTrain(){
     // console.log(this.pass);
@@ -46,23 +50,34 @@ export class HomeComponent {
   }
   myaccount(){
     this.email=JSON.parse(localStorage.getItem('email')||'') 
+    this.username=JSON.parse(localStorage.getItem('username')||'') 
+    this.phone=JSON.parse(localStorage.getItem('phone')||'') 
+
   }
   logout(){
-    alert('logout successful');
-    localStorage.removeItem('date');
-    localStorage.removeItem('to');
-    localStorage.removeItem('start');
-    localStorage.removeItem('trainNumber');
-    localStorage.removeItem('email');
-    localStorage.removeItem('add');
-    localStorage.removeItem('pass');
-    localStorage.removeItem('rs');
-    localStorage.removeItem('end');
-    localStorage.removeItem('from');
-    localStorage.removeItem('times');
-    localStorage.removeItem('totalRs');
-    this.router.navigateByUrl('')
+    this.ds.logout();
   }
+
+  displayTicket(){
+    this.router.navigateByUrl('booking/displayTicket')
+  }
+
+
+
+  // saveChanges(){
+  //   this.id=JSON.parse(localStorage.getItem('id')||'') 
+  //   var ID=this.id;
+  //   var email=this.email;
+  //   var username=this.username;
+  //   var phone=this.phone;
+  //   this.ds.saveChanges(email,username,phone,ID).subscribe(
+  //     (result:any)=>{
+  //       alert(result.message);
+  //     }
+  //   )
+
+
+  // }
 
 
 }

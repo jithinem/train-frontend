@@ -53,13 +53,13 @@
     margin-left: 20%;
     border-radius: 10px;
 }
-.boxbottom{
+/* .boxbottom{
     margin-top: 0px;
     display: flex;
     align-items: center;
     justify-content: right;
     padding: 10px;
-}
+} */
 .myaccount{
     display: flex;
     justify-content: end;
@@ -80,6 +80,6 @@ footer{
 }
 .modal-body input{
     margin-bottom: 10px;
-    width: 400px;
+    width: 300px;
     border-radius: 5px;
 }

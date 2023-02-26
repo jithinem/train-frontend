@@ -10,12 +10,16 @@ import html2canvas from 'html2canvas';
 
 declare var require:any;
 
+
+
 @Component({
-  selector: 'app-ticket',
-  templateUrl: './ticket.component.html',
-  styleUrls: ['./ticket.component.css']
+  selector: 'app-display-ticket',
+  templateUrl: './display-ticket.component.html',
+  styleUrls: ['./display-ticket.component.css']
 })
-export class TicketComponent {
+export class DisplayTicketComponent {
+  email:any;
+  displayTicket:any;
   trainNumber:any;
   date:any;
   start:any;
@@ -24,51 +28,44 @@ export class TicketComponent {
   to:any;
   pass:any;
   price:any;
-  email:any;
   totalRs:any;
+  show:any=false;
 
-
+  
   constructor(private ds:DataService){
-    // alert('ticket send to your mail')
-    this.trainNumber=localStorage.getItem('trainNumber')||'';
-    this.date=localStorage.getItem('date')||'';
-    this.start=localStorage.getItem('start')||'';
-    this.end=localStorage.getItem('end')||'';
-    this.from=localStorage.getItem('from')||'';
-    this.to=localStorage.getItem('to')||'';
-    this.pass=localStorage.getItem('pass')||'';
     this.email=JSON.parse(localStorage.getItem('email')||'');
-    this.totalRs=localStorage.getItem('totalRs')||''
-    this.ds.addBooking(this.email,this.trainNumber,this.date,this.start,this.end,this.from,this.to,this.pass,this.totalRs).subscribe(
+    this.ds.getTicket(this.email).subscribe(
       (result:any)=>{
         alert(result.message);
+        this.displayTicket=result.getTicket
       },
       result=>{
-        alert(result.message.error);
+        alert(result.error.message)
       }
+      
     )
-  
+
+  }
+  logout(){
+    this.ds.logout();
   }
 
-  // @ViewChild('pdfTable') pdfTable!:ElementRef;
-
-
-  // public downloadPdf(){
-  //   alert('d');
-  //   const doc=new jsPDF;
-  //   const pdfTable=this.pdfTable.nativeElement;
-  //   var html=htmlToPdfmake(pdfTable.innerHTML);
-  //   const documentDefinition={content:html};
-  //   pdfMake.createPdf(documentDefinition).open();
-  //   // let doc=new jsPDF('landscape');
-  //   // doc.fromHTML(this.pdfTable.nativeElement,function(){
-  //   //   doc.save("ticket");
-  //   // })
-  // }
+  downloadPdf(displayTicket:any,i:any){
+    this.show=true;
+    this.date=displayTicket[i].date;
+    this.trainNumber=displayTicket[i].trainNumber;
+    this.from=displayTicket[i].from;
+    this.start=displayTicket[i].start;
+    this.to=displayTicket[i].to;
+    this.end=displayTicket[i].end;
+    this.pass=displayTicket[i].pass;
+    this.totalRs=displayTicket[i].totalRs;
+    console.log(this.trainNumber);
+  }
 
   @ViewChild('htmlData') htmlData!:ElementRef;
 
-  public downloadPdf(): void {
+  public downloadTicket(): void {
     let DATA: any = document.getElementById('htmlData');
     html2canvas(DATA).then((canvas) => {
       let fileWidth = 215;
@@ -84,6 +81,7 @@ export class TicketComponent {
       PDF.save('ticket.pdf');
     });
   }
+
 
 
 }

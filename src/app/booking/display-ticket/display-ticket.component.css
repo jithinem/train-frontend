@@ -1,0 +1,87 @@
+table{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+table,th,tr,td{
+    border: 2px black solid;
+}
+table button{
+    border: none;
+    background-color: bisque;
+}
+.back{
+	top: 95%;
+	left: 70%;
+	transform: translate(-70%,-95%);
+	position: absolute;
+}
+.back a{
+	text-decoration: none;
+}
+.myaccount{
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+nav{
+    height: 140px;
+}
+nav h1{
+    margin-left: 10px;
+    color: gold;
+}
+nav img{
+    border-radius: 10px;
+}
+footer{
+    margin-top: 32%;
+}
+
+
+
+.card{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-40%);
+	background-color: yellow;
+	border: 2px black solid;
+	/* height: 600px;
+	width: 600px; */
+}
+li{
+	border: none;
+	background-color: rgb(189, 223, 101);
+	display: flex;
+
+}
+ul{
+	background-color: rgb(189, 223, 101);
+}
+.ttr{
+	background-color: rgb(225, 199, 166);
+}
+.down{
+	top: 95%;
+	left: 50%;
+	transform: translate(-50%,-95%);
+	position: absolute;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	/* background-color: blueviolet; */
+}
+.down a{
+	text-decoration: none;
+	margin-left: 150PX;
+}
+h4{
+	font-weight: bolder;
+}
+
+
+
+

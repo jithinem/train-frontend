@@ -1,0 +1,184 @@
+<nav *ngIf="!show" class="navbar navbar-expand-lg navbar-light bg-dark text-light">
+    <img width="100px" src="https://www.seekpng.com/png/detail/209-2096181_dive4-getting-to-koh-tao-train-logo-black.png" alt="">
+    <h1>GOLDEN LINE KERALA RAIL LIMITED</h1>
+  
+    <div class="collapse navbar-collapse myaccount" id="navbarSupportedContent">
+      <form class="form-inline  my-2 my-lg-0 ">
+        <button class="btn btn-outline-success my-2 my-sm-0 me-3" type="submit">my account</button>
+        <button class="btn btn-outline-success my-2 my-sm-0 me-3" routerLink="/home" type="submit">Back to Home</button>
+        <button class="btn btn-outline-success my-2 my-sm-0 me-3" type="submit" (click)="logout()">logout</button>
+  
+      </form>
+    </div>
+  </nav>
+  
+      
+      
+      
+      
+      
+      <!--Table-->
+      <table *ngIf="!show" class="table  w-auto">
+        <!--Table head-->
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>No.</th>
+            <th>Train Number</th>
+            <th>Departure</th>
+            <th>Departure Time</th>
+            <th>Destination</th>
+            <th>Destination Time</th>
+            <th>Passengers</th>
+            <th>Ticket rice</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <!--Table head-->
+      
+        <!--Table body-->
+        <tbody>
+          <tr class="table-info" *ngFor="let ticket of displayTicket let i=index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{ticket.date}}</td>
+            <td>{{ticket.trainNumber}}</td>
+            <td>{{ticket.from}}</td>
+            <td>{{ticket.start}}</td>
+            <td>{{ticket.to}}</td>
+            <td>{{ticket.end}}</td>
+            <td>{{ticket.pass}}</td>
+            <td>{{ticket.totalRs}}</td>
+            <td class="bg-success" (click)="downloadPdf(displayTicket,i)" ><button class="bg-success ">Download Pdf</button></td>
+            <td class="bg-danger"><button class="bg-danger">Cancel Ticket</button></td>
+
+          </tr>
+        </tbody>
+        <!--Table body-->
+      </table>
+      <!--Table-->
+
+
+      <div #pdfTable="" *ngIf="show" id="htmlData" class="card content " style="width: 28rem;">
+        <img class="card-img-top" style="width: 150px; margin-left: 30%;" src="../assets/qr code.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-center">GOLDEN LINE KERALA RAIL LIMITED</h5>
+          <p class="text-center">GT45ww23fgrtu4</p>
+          <p class="card-text text-center">SEAT NO:C14</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <div style="display: flex; justify-content: space-between;">
+            <li class="list-group-item" >TRAIN NO:<h5>{{trainNumber}}</h5></li>
+            <li class="list-group-item">DATE:<h5>{{date}}</h5> </li>  
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <li class="list-group-item">DEPARTURE:<h5>{{start}}</h5> </li>
+            <li class="list-group-item">ARRIVAL:<h5>{{end}}</h5> </li>  
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <li class="list-group-item">FROM:<h5>{{from}}</h5> </li>
+            <li class="list-group-item">TO:<h5>{{to}}</h5> </li>  
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <li class="list-group-item">NO. OF PASSENGERS:<h5>{{pass}}</h5> </li>
+            <li class="list-group-item">PRICE:<h5>Rs.{{totalRs}}</h5> </li>  
+          </div>
+      
+        </ul>
+        <div class="card-body ttr">
+          <p>TTR Check <i class="fa-light fa-square fa-2x"></i></p>
+        </div>
+      </div>
+      <div class="down">
+        <div><button (click)="downloadTicket()">Download ticket</button></div>
+        <div><a routerLink="/home">Back to Home</a></div>
+        <!-- <div><button (click)="downloadPdf()">Download ticket</button></div> -->
+      </div>
+    
+      
+    
+    
+
+  
+      <footer *ngIf="!show" class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #3b5998;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #55acee;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-twitter"></i
+            ></a>
+      
+            <!-- Google -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #dd4b39;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #ac2bac;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #0082ca;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <!-- Github -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #333333;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-0">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3 text-secondary"></i> TRIVANDRUM CENTRAL, TRIVANDRUM, KERALA</p>
+            <p>
+              <i class="fas fa-envelope me-3 text-secondary"></i>
+              goldenrail@kerala.com
+            </p>
+            <p><i class="fas fa-phone me-3 text-secondary"></i> + 91 9876598765</p>
+            <p><i class="fas fa-print me-3 text-secondary"></i> + 91 9089090890</p>
+          </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2023 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">goldenrailkerala.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    

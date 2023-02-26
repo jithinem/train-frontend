@@ -26,8 +26,7 @@ export class TraintimeComponent {
 
   }
   logout(){
-    alert('logout successful');
-    this.router.navigateByUrl('')
+    this.ds.logout();
   }
 
 

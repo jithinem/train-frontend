@@ -7,6 +7,8 @@ import { TraintimeComponent } from './traintime/traintime.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { TicketComponent } from './ticket/ticket.component';
+import { DisplayTicketComponent } from './display-ticket/display-ticket.component';
+import { SpareComponent } from './spare/spare.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { TicketComponent } from './ticket/ticket.component';
     TraintimeComponent,
     PaymentComponent,
     ConfirmationComponent,
-    TicketComponent
+    TicketComponent,
+    DisplayTicketComponent,
+    SpareComponent
   ],
   imports: [
     CommonModule,
