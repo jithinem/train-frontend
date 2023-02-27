@@ -33,6 +33,20 @@ ul{
 .back a{
 	text-decoration: none;
 	margin-right: 150PX;
+	border: 2px black solid;
+	border-radius: 5px;
+	background-color: bisque;
+	color: black;
+}
+.back a:hover{
+	background-color: rgb(10, 234, 25);
+}
+.back button{
+	background-color: bisque;
+	border-radius: 5px;
+}
+.back button:hover{
+	background-color: rgb(10, 234, 25);
 }
 h4{
 	font-weight: bolder;

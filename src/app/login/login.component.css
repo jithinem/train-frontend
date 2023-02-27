@@ -6,6 +6,8 @@
     background-size: cover;
 }
 
+
+
 .box{
     background-color: rgb(177, 194, 227);
     width: 500px;
@@ -36,11 +38,21 @@ input{
     height: 30px;
     margin-left: 50px;
     border-radius: 10px;
+    background-color: rgb(200, 159, 108);
+}
+.loginbt:hover{
+    background-color: rgb(161, 117, 203);
+    font-weight: bolder;
 }
 .boxbottom{
-    margin-top: 90px;
+    margin-top: 65px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+}
+.boxbottom a:hover{
+    background-color: grey;
+    border-radius: 5px;
+    color: yellowgreen;
 }

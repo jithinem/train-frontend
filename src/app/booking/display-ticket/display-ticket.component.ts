@@ -36,7 +36,7 @@ export class DisplayTicketComponent {
     this.email=JSON.parse(localStorage.getItem('email')||'');
     this.ds.getTicket(this.email).subscribe(
       (result:any)=>{
-        alert(result.message);
+        // alert(result.message);
         this.displayTicket=result.getTicket
       },
       result=>{

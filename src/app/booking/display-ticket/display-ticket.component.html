@@ -4,9 +4,8 @@
   
     <div class="collapse navbar-collapse myaccount" id="navbarSupportedContent">
       <form class="form-inline  my-2 my-lg-0 ">
-        <button class="btn btn-outline-success my-2 my-sm-0 me-3" type="submit">my account</button>
-        <button class="btn btn-outline-success my-2 my-sm-0 me-3" routerLink="/home" type="submit">Back to Home</button>
-        <button class="btn btn-outline-success my-2 my-sm-0 me-3" type="submit" (click)="logout()">logout</button>
+        <button class="btn btn-outline-success text-light my-2 my-sm-0 me-3" routerLink="/home" type="submit">Back to Home</button>
+        <button class="btn btn-outline-success text-light my-2 my-sm-0 me-3" type="submit" (click)="logout()">logout</button>
   
       </form>
     </div>
@@ -30,9 +29,9 @@
             <th>Destination</th>
             <th>Destination Time</th>
             <th>Passengers</th>
-            <th>Ticket rice</th>
+            <th>Ticket Price</th>
             <th></th>
-            <th></th>
+            <!-- <th></th> -->
           </tr>
         </thead>
         <!--Table head-->
@@ -40,7 +39,7 @@
         <!--Table body-->
         <tbody>
           <tr class="table-info" *ngFor="let ticket of displayTicket let i=index">
-            <th scope="row">{{i+1}}</th>
+            <td scope="row">{{i+1}}</td>
             <td>{{ticket.date}}</td>
             <td>{{ticket.trainNumber}}</td>
             <td>{{ticket.from}}</td>
@@ -49,8 +48,9 @@
             <td>{{ticket.end}}</td>
             <td>{{ticket.pass}}</td>
             <td>{{ticket.totalRs}}</td>
-            <td class="bg-success" (click)="downloadPdf(displayTicket,i)" ><button class="bg-success ">Download Pdf</button></td>
-            <td class="bg-danger"><button class="bg-danger">Cancel Ticket</button></td>
+            <button class="downloadTicket" (click)="downloadPdf(displayTicket,i)">Download Ticket</button>
+            <!-- <td class="downloadTicket"  ></td> -->
+            <!-- <td class="bg-danger"><button class="bg-danger">Cancel Ticket</button></td> -->
 
           </tr>
         </tbody>
@@ -88,11 +88,12 @@
         <div class="card-body ttr">
           <p>TTR Check <i class="fa-light fa-square fa-2x"></i></p>
         </div>
-      </div>
-      <div class="down">
-        <div><button (click)="downloadTicket()">Download ticket</button></div>
-        <div><a routerLink="/home">Back to Home</a></div>
-        <!-- <div><button (click)="downloadPdf()">Download ticket</button></div> -->
+        <div class="down">
+          <div><button (click)="downloadTicket()">Download ticket</button></div>
+          <div><a routerLink="/home">Home</a></div>
+          <!-- <div><button (click)="downloadPdf()">Download ticket</button></div> -->
+        </div>
+  
       </div>
     
       

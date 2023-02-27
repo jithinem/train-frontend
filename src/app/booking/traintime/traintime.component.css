@@ -3,14 +3,23 @@ table{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+
+}
+th{
+    background-color: rgb(192, 160, 224);
 }
 table,th,tr,td{
     border: 2px black solid;
+
 }
 table button{
     border: none;
     background-color: bisque;
 }
+table button:hover{
+    background-color: rgb(125, 159, 202);
+}
+
 .back{
 	top: 95%;
 	left: 70%;

@@ -27,3 +27,17 @@
     .horizontal-timeline .items .items-list {
     padding-top: 15px;
     }
+
+button{
+    background-color: aquamarine;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: rgb(163, 111, 47);
+    color: white;
+}
+a:hover{
+    color: rgb(12, 32, 181);
+    background-color: darkblue;
+    border-radius: 5px;
+}

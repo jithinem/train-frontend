@@ -4,13 +4,22 @@ table{
     left: 50%;
     transform: translate(-50%,-50%);
 }
+th{
+    background-color: rgb(192, 160, 224);
+}
 table,th,tr,td{
     border: 2px black solid;
 }
 table button{
     border: none;
-    background-color: bisque;
 }
+.downloadTicket{
+	background-color: rgb(204, 212, 164);
+}
+.downloadTicket:hover{
+	background-color: rgb(59, 227, 26);
+}
+
 .back{
 	top: 95%;
 	left: 70%;
@@ -65,19 +74,37 @@ ul{
 	background-color: rgb(225, 199, 166);
 }
 .down{
-	top: 95%;
+	top: 110%;
 	left: 50%;
-	transform: translate(-50%,-95%);
+	transform: translate(-50%,-110%);
 	position: absolute;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	/* background-color: blueviolet; */
 }
+.down button{
+	width: 150px;
+	margin-right: 100px;
+	border-radius: 10px;
+	background-color: rgb(223, 187, 143);
+}
+.down button:hover{
+	background-color: rgb(128, 128, 206);
+}
 .down a{
 	text-decoration: none;
-	margin-left: 150PX;
+	width: 150px;
+	margin-left: 100px;
+	border: 2px black solid;
+	border-radius: 5px;
+	background-color: rgb(223, 187, 143);
+	color: black;
 }
+.down a:hover{
+	background-color: rgb(128, 128, 206);
+}
+
 h4{
 	font-weight: bolder;
 }

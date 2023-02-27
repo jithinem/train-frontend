@@ -1,5 +1,11 @@
 <div class="container-fluid">
+
+    
+
+
+
     <div class="box">
+    
         <form [formGroup]="loginForm">
             <div class="boxhead">Login</div>
             <div class="f">
@@ -12,8 +18,8 @@
                 <div><button class="loginbt" (click)="login()">Login</button></div>
             </div>
             <div class="boxbottom">
-                <div>Not registered?<a routerLink="register">Sign Up here</a></div>
-                <div><a routerLink="admin">Admin Login</a></div>
+                <div>Not registered?<a style="text-decoration: none;" routerLink="register">Sign Up here</a></div>
+                <div><a style="text-decoration: none;" routerLink="admin">Admin Login</a></div>
             </div>
 
         </form>

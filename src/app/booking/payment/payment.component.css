@@ -6,3 +6,6 @@
       radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
     background-blend-mode: screen, color-dodge, overlay, difference, normal;
   }
+  .pay:hover{
+    background-color: #1fc556;
+  }

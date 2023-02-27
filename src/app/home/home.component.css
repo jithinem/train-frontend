@@ -1,5 +1,5 @@
 .box{
-    background-color: rgb(202, 157, 99);
+    background-color: rgb(94, 186, 91);
     width: 500px;
     height: 350px;
     top: 32%;
@@ -50,8 +50,14 @@
 .loginbt{
     width: 200px;
     height: 30px;
-    margin-left: 20%;
+    margin-left: 25%;
     border-radius: 10px;
+}
+.loginbt:hover{
+    background-color: rgb(64, 83, 25);
+    transform: scaleX(1.2);
+    color: white;
+    font-weight: bold;
 }
 /* .boxbottom{
     margin-top: 0px;
@@ -82,4 +88,8 @@ footer{
     margin-bottom: 10px;
     width: 300px;
     border-radius: 5px;
+}
+.modal-footer button:hover{
+    color: gold;
+    background-color: black;
 }

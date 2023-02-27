@@ -34,7 +34,7 @@ export class HomeComponent {
     console.log(to);
     this.ds.getTrain(from,to).subscribe(
       (result:any)=>{
-        alert(result.message);
+        // alert(result.message);
         localStorage.setItem('from',from)
         localStorage.setItem('to',to)
         localStorage.setItem('date',date)
